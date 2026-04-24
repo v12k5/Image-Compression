@@ -1,20 +1,36 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# SNN Compressor AI Research Platform
 
-# Run and deploy your AI Studio app
+An interactive platform for AI-powered compression research and experimentation.
 
-This contains everything you need to run your app locally.
+## 🚀 Features
+- **Compression Workspace**: Analyze and optimize data.
+- **Reconstruction**: AI-driven data recovery.
+- **Research Section**: Document and share findings.
 
-View your app in AI Studio: https://ai.studio/apps/e98bebe4-0a29-45aa-8351-c8ae398e405a
+## 🛠 Tech Stack
+- **Frontend**: React 19, Vite, Tailwind CSS
+- **AI Integration**: Google Gemini AI
+- **Animations**: Framer Motion
 
-## Run Locally
+## 💻 Local Development
 
-**Prerequisites:**  Node.js
+1. **Clone the repository**
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+3. **Set up Environment Variables**:
+   Create a `.env` file in the root and add your API keys:
+   ```env
+   VITE_GEMINI_API_KEY=your_key_here
+   ```
+4. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
 
+## 🌐 Deployment
+This project is configured for easy deployment on **Vercel** or **Netlify**. Connect your GitHub repository to Vercel for automatic deployments on every push.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+---
+*Note: This is a research platform prototype.*
