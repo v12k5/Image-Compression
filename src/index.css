@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-primary: var(--color-indigo-600);
+  --color-primary-hover: var(--color-indigo-700);
+  --color-primary-light: var(--color-indigo-50);
+
+  --background-page: var(--color-slate-50);
+  --background-card: white;
+  --text-main: var(--color-slate-900);
+  --text-muted: var(--color-slate-500);
+  --border-main: var(--color-slate-200);
+}
+
+@layer base {
+  :root {
+    --background-page: var(--color-slate-50);
+    --background-card: white;
+    --text-main: var(--color-slate-900);
+    --text-muted: var(--color-slate-500);
+    --border-main: var(--color-slate-200);
+    
+    --color-primary: var(--color-indigo-600);
+    --color-primary-hover: var(--color-indigo-700);
+    --color-primary-light: var(--color-indigo-50);
+  }
+
+  .dark {
+    --background-page: var(--color-slate-950);
+    --background-card: var(--color-slate-900);
+    --text-main: var(--color-slate-50);
+    --text-muted: var(--color-slate-400);
+    --border-main: var(--color-slate-800);
+    
+    --color-primary: var(--color-indigo-500);
+    --color-primary-hover: var(--color-indigo-400);
+    --color-primary-light: var(--color-indigo-950);
+  }
+
+  body {
+    background-color: var(--background-page);
+    color: var(--text-main);
+    @apply transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .technical-label {
+    @apply text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest leading-none;
+  }
+  
+  .card-container {
+    background-color: var(--background-card);
+    border-color: var(--border-main);
+    @apply border rounded-xl p-4 shadow-sm transition-colors duration-300;
+  }
+}
